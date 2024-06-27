@@ -19,5 +19,8 @@ ResizeMode="NoResize">
             <Button x:Name="btnAddRecipe" Content="Add Recipe" Height="40" Background="#FF172935" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="35,1,1,1" FontFamily="Roboto" FontSize="14" Margin="0,35,0,0" Click="AddRecipe_Click"/>
             <Button x:Name="btnDisplayRecipe" Content="Display Recipes" Height="40" Background="#FF172935" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="35,1,1,1" FontFamily="Roboto" FontSize="14" Click="DisplayRecipe_Click"/>
         </StackPanel>
+        <Button Grid.Column="1" Content="Scale selected recipe" HorizontalAlignment="Left" Margin="34,22,0,0" Grid.Row="1" VerticalAlignment="Top" Click="ScaleButton_Click" Height="58" Width="169"/>
+        <Button Grid.Column="1" Content="Reset selected recipe" HorizontalAlignment="Left" Margin="34,100,0,0" Grid.Row="1" VerticalAlignment="Top" Click="ResetButton_Click" Height="58" Width="169"/>
+        <Button Grid.Column="1" Content="Delete selected recipe" HorizontalAlignment="Left" Margin="34,178,0,0" Grid.Row="1" VerticalAlignment="Top" Click="DeleteButton_Click" Height="58" Width="169"/>
     </Grid>
 </Window>

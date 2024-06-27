@@ -39,5 +39,18 @@ namespace RecipeAppWPF
             this.Close();
         }
 
+        private void ScaleButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

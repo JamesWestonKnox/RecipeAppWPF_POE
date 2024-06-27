@@ -30,6 +30,7 @@ namespace RecipeAppWPF
             {
                 Recipes.Add(addRecipe.currentRecipe);
             }
+            this.Close();
         }
 
         private void DisplayRecipe_Click(object sender, RoutedEventArgs e)
