@@ -33,7 +33,6 @@ namespace RecipeAppWPF
             Ingredients[ingredientName].Add((quantity, unit, calories, foodGroup));
             OriginalIngredients[ingredientName].Add((quantity, unit, calories, foodGroup));
 
-            // Raise event if total calories exceed 300
             if (CalculateTotalCalories() > 300)
             {
                 HighCalorieContentWarning?.Invoke(this, "Warning: Total calories exceed 300!");
