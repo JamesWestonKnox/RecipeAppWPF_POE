@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,11 +15,11 @@ using System.Windows.Shapes;
 
 namespace RecipeAppWPF
 {
-    /// <summary>
-    /// Interaction logic for ManageRecipe.xaml
-    /// </summary>
+
+
     public partial class ManageRecipe : Window
     {
+        public static List<Recipe> Recipes = new List<Recipe>();
         public ManageRecipe()
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace RecipeAppWPF
 
         private void DisplayRecipe_Click(object sender, RoutedEventArgs e)
         {
-            DisplayRecipe displayRecipe = new DisplayRecipe();
+            DisplayRecipe displayRecipe = new DisplayRecipe(Recipes);
             displayRecipe.Show();
             this.Close();
         }

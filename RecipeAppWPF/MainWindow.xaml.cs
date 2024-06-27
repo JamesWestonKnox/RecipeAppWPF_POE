@@ -11,27 +11,30 @@ using System.Windows.Shapes;
 
 namespace RecipeAppWPF
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
-
+        public static List<Recipe> Recipes = new List<Recipe>();
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void AddRecipe_Click(object sender, RoutedEventArgs e)
         {
             AddRecipe addRecipe = new AddRecipe();
-            addRecipe.Show();
-            this.Close();
+            addRecipe.ShowDialog(); 
+
+            if (addRecipe.currentRecipe != null)
+            {
+                Recipes.Add(addRecipe.currentRecipe);
+            }
         }
 
         private void DisplayRecipe_Click(object sender, RoutedEventArgs e)
         {
-            DisplayRecipe displayRecipe = new DisplayRecipe();
+            DisplayRecipe displayRecipe = new DisplayRecipe(Recipes);
             displayRecipe.Show();
             this.Close();
         }

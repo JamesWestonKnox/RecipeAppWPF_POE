@@ -14,21 +14,27 @@ using System.Windows.Shapes;
 
 namespace RecipeAppWPF
 {
-    /// <summary>
-    /// Interaction logic for DisplayRecipe.xaml
-    /// </summary>
     public partial class DisplayRecipe : Window
     {
-        public DisplayRecipe()
+        public List<Recipe> Recipes { get; set; }
+        public Recipe SelectedRecipe { get; set; }
+
+        public DisplayRecipe(List<Recipe> recipes)
         {
             InitializeComponent();
+            Recipes = recipes;
+            DataContext = this;
         }
 
+        private void RecipeComboBox_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            SelectedRecipe = (sender as ComboBox).SelectedItem as Recipe;
+        }
         private void AddRecipe_Click(object sender, RoutedEventArgs e)
         {
             AddRecipe addRecipe = new AddRecipe();
             addRecipe.Show();
-            this.Close();
+
         }
 
         private void ManageRecipe_Click(object sender, RoutedEventArgs e)

@@ -17,7 +17,9 @@ namespace RecipeAppWPF
 
     public partial class AddRecipe : Window
     {
-        private Recipe currentRecipe;
+        public static List<Recipe> Recipes = new List<Recipe>();
+
+        public Recipe currentRecipe;
 
         public AddRecipe()
         {
@@ -27,7 +29,7 @@ namespace RecipeAppWPF
 
         private void DisplayRecipe_Click(object sender, RoutedEventArgs e)
         {
-            DisplayRecipe displayRecipe = new DisplayRecipe();
+            DisplayRecipe displayRecipe = new DisplayRecipe(Recipes);
             displayRecipe.Show();
             this.Close();
         }
