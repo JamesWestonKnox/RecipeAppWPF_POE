@@ -1,4 +1,4 @@
-﻿<Window x:Class="RecipeAppWPF.MainWindow"
+﻿<Window x:Class="RecipeAppWPF.DisplayRecipe"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Recipe App" Height="450" Width="800" WindowStartupLocation="CenterScreen" 
@@ -16,10 +16,8 @@ ResizeMode="NoResize">
 
         <StackPanel Grid.RowSpan="2" Background="#FF172935">
             <Label Content="Recipe App" Width="131" FontFamily="Roboto" FontSize="16" Grid.Row="1" Foreground="White" Margin="0,13,0,0"/>
-            <Button x:Name="btnAddRecipe" Content="Add Recipe" Height="40" Background="#FF172935" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="35,1,1,1" FontFamily="Roboto" FontSize="14" Click="AddRecipe_Click"/>
-            <Button x:Name="btnDisplayRecipe" Content="Display Recipes" Height="40" Background="#FF172935" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="35,1,1,1" FontFamily="Roboto" FontSize="14" Click="DisplayRecipe_Click"/>
+            <Button x:Name="btnAddRecipe" Content="Add Recipe" Height="40" Background="#FF172935" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="35,1,1,1" Margin="0,35,0,0" FontFamily="Roboto" FontSize="14" Click="AddRecipe_Click" RenderTransformOrigin="0.5,0.5"/>
             <Button x:Name="btnManageRecipe" Content="Manage Recipe" Height="40" Background="#FF172935" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="35,1,1,1" FontFamily="Roboto" FontSize="14" Click="ManageRecipe_Click"/>
         </StackPanel>
-        <Label Content="WELCOME TO YOUR RECIPE APP" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" FontSize="36" Grid.Column="1"/>
     </Grid>
 </Window>

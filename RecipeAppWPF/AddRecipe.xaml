@@ -1,0 +1,77 @@
+﻿<Window x:Class="RecipeAppWPF.AddRecipe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Recipe App" Height="564" Width="888" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="59"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="157"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.RowSpan="2" Background="#FF172935" Margin="0,0,0,-10">
+            <Label Content="Recipe App" Width="131" FontFamily="Roboto" FontSize="16" Grid.Row="1" Foreground="White" Margin="0,13,0,0"/>
+            <Button x:Name="btnManageRecipe" Content="Manage Recipe" Height="40" Background="#FF172935" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="35,1,1,1" Margin="0,35,0,0" FontFamily="Roboto" FontSize="14" Click="ManageRecipe_Click"/>
+            <Button x:Name="btnDisplayRecipe" Content="Display Recipes" Height="40" Background="#FF172935" BorderBrush="#00707070" Foreground="White" HorizontalContentAlignment="Left" Padding="35,1,1,1" FontFamily="Roboto" FontSize="14" Click="DisplayRecipe_Click"/>
+        </StackPanel>
+
+        <Grid Grid.Column="1" Margin="20,20,20,0" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Enter recipe name:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" FontSize="18" Margin="0,10,0,0"/>
+            <TextBox x:Name="RecipeNameTextBox" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Width="300" FontSize="18" Margin="10,10,0,0"/>
+
+            <Label Content="Enter ingredient name:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" FontSize="18" Margin="0,10,0,0"/>
+            <TextBox x:Name="IngredientNameTextBox" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Width="300" FontSize="18" Margin="10,10,0,0"/>
+
+            <Label Content="Enter ingredient quantity:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" FontSize="18" Margin="0,10,0,0"/>
+            <TextBox x:Name="IngredientQtyTextBox" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" Width="300" FontSize="18" Margin="10,10,0,0"/>
+
+            <Label Content="Enter ingredient unit:" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Left" FontSize="18" Margin="0,10,0,0"/>
+            <TextBox x:Name="IngredientUnitTextBox" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" Width="300" FontSize="18" Margin="10,10,0,0"/>
+
+            <Label Content="Enter ingredient calories:" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Left" FontSize="18" Margin="0,10,0,0"/>
+            <TextBox x:Name="IngredientCaloriesTextBox" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" Width="300" FontSize="18" Margin="10,10,0,0"/>
+
+            <Label Content="Enter ingredient food group:" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" FontSize="18" Margin="0,10,0,0"/>
+            <ComboBox x:Name="IngredientFoodGroupComboBox" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" Width="300" FontSize="18" Margin="10,10,0,0">
+                <ComboBoxItem Content="Vegetables"/>
+                <ComboBoxItem Content="Fruits"/>
+                <ComboBoxItem Content="Grains"/>
+                <ComboBoxItem Content="Proteins"/>
+                <ComboBoxItem Content="Dairy"/>
+                <ComboBoxItem Content="Fats"/>
+            </ComboBox>
+
+            <Button x:Name="AddIngredientButton" Grid.Row="7" Grid.ColumnSpan="2" Content="Add Ingredient" Width="200" HorizontalAlignment="Center" Margin="0,10,0,10" Click="AddIngredientButton_Click"/>
+
+            <Label Content="Enter step:" Grid.Row="8" Grid.Column="0" HorizontalAlignment="Left" FontSize="18" Margin="0,10,0,0"/>
+            <TextBox x:Name="StepTextBox" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Left" Width="300" FontSize="18" Margin="10,10,0,0"/>
+
+            <Button x:Name="AddStepButton" Grid.Row="9" Grid.ColumnSpan="2" Content="Add Step" Width="200" HorizontalAlignment="Center" Margin="0,10,0,10" Click="AddStepButton_Click"/>
+
+            <Button x:Name="SaveRecipeButton" Grid.Row="10" Grid.ColumnSpan="2" Content="Save Recipe" Width="200" HorizontalAlignment="Center" Margin="0,20,0,0" Click="SaveRecipeButton_Click"/>
+            <Label Content="Add a new recipe below" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="22" Margin="0,10,0,10"/>
+        </Grid>
+    </Grid>
+</Window>
