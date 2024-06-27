@@ -22,6 +22,7 @@ namespace RecipeAppWPF
             RecipeName = recipeName;
         }
 
+        
         public void AddIngredient(string ingredientName, double quantity, string unit, double calories, string foodGroup)
         {
             if (!Ingredients.ContainsKey(ingredientName))
@@ -38,6 +39,7 @@ namespace RecipeAppWPF
                 HighCalorieContentWarning?.Invoke(this, "Warning: Total calories exceed 300!");
             }
         }
+
 
         public void AddStep(string step)
         {

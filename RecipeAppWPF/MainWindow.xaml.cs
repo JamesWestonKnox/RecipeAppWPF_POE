@@ -14,13 +14,14 @@ namespace RecipeAppWPF
 
     public partial class MainWindow : Window
     {
+
         public static List<Recipe> Recipes = new List<Recipe>();
         public MainWindow()
         {
             InitializeComponent();
 
         }
-
+        //method to open addrecipe window and add recipe if current recipe is not null
         private void AddRecipe_Click(object sender, RoutedEventArgs e)
         {
             AddRecipe addRecipe = new AddRecipe();
@@ -33,6 +34,7 @@ namespace RecipeAppWPF
             this.Close();
         }
 
+        //method to open display recipe window
         private void DisplayRecipe_Click(object sender, RoutedEventArgs e)
         {
             DisplayRecipe displayRecipe = new DisplayRecipe(Recipes);
@@ -40,6 +42,7 @@ namespace RecipeAppWPF
             this.Close();
         }
 
+        //method to open manage recipe method
         private void ManageRecipe_Click(object sender, RoutedEventArgs e)
         {
             ManageRecipe manageRecipe = new ManageRecipe();

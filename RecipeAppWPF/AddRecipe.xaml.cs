@@ -27,6 +27,7 @@ namespace RecipeAppWPF
             currentRecipe = new Recipe();
         }
 
+        //redirect method
         private void DisplayRecipe_Click(object sender, RoutedEventArgs e)
         {
             DisplayRecipe displayRecipe = new DisplayRecipe(Recipes);
@@ -34,6 +35,7 @@ namespace RecipeAppWPF
             this.Close();
         }
 
+        //redirect method
         private void ManageRecipe_Click(object sender, RoutedEventArgs e)
         {
             ManageRecipe manageRecipe = new ManageRecipe();
@@ -41,6 +43,7 @@ namespace RecipeAppWPF
             this.Close();
         }
 
+        //method to populate recipe with ingredient by taking user input through text boxes and combo boxes
         private void AddIngredientButton_Click(object sender, RoutedEventArgs e)
         {
             string ingrName = IngredientNameTextBox.Text;
@@ -63,6 +66,7 @@ namespace RecipeAppWPF
             }
         }
 
+        //method to add step to recipe
         private void AddStepButton_Click(object sender, RoutedEventArgs e)
         {
             string step = StepTextBox.Text;
@@ -71,6 +75,7 @@ namespace RecipeAppWPF
             StepTextBox.Clear();
         }
 
+        //method to save recipe
         private void SaveRecipeButton_Click(object sender, RoutedEventArgs e)
         {
             string recipeName = RecipeNameTextBox.Text;
