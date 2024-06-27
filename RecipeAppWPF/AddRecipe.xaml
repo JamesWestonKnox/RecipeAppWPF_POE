@@ -55,12 +55,13 @@
 
             <Label Content="Enter ingredient food group:" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" FontSize="18" Margin="0,10,0,0"/>
             <ComboBox x:Name="IngredientFoodGroupComboBox" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" Width="300" FontSize="18" Margin="10,10,0,0">
-                <ComboBoxItem Content="Vegetables"/>
-                <ComboBoxItem Content="Fruits"/>
-                <ComboBoxItem Content="Grains"/>
-                <ComboBoxItem Content="Proteins"/>
-                <ComboBoxItem Content="Dairy"/>
-                <ComboBoxItem Content="Fats"/>
+                <ComboBoxItem Content="Starchy foods"/>
+                <ComboBoxItem Content="Vegetables and fruits"/>
+                <ComboBoxItem Content="Dry beans, peas, lentils and soya"/>
+                <ComboBoxItem Content="Chicken, fish, meat and eggs"/>
+                <ComboBoxItem Content="Milk and dairy products"/>
+                <ComboBoxItem Content="Fats and oil"/>
+                <ComboBoxItem Content="Water"/>
             </ComboBox>
 
             <Button x:Name="AddIngredientButton" Grid.Row="7" Grid.ColumnSpan="2" Content="Add Ingredient" Width="200" HorizontalAlignment="Center" Margin="0,10,0,10" Click="AddIngredientButton_Click"/>
